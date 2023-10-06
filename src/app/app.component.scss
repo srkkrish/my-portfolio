@@ -1,0 +1,225 @@
+progress {
+    height: 15px;
+    position: fixed;
+    width: 100%;
+    top: -4px;
+    accent-color: #ff6600;
+}
+
+.row,
+.d-flex {
+    display: flex;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.border-bottom {
+    border-bottom: 1px solid lightgrey;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.my-portfolio {
+    background-color: #000;
+    height: 100vh;
+    display: flex !important;
+    // flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./../assets/img2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    .my-title {
+        color: #fff;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid #ff6600; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation:
+            typing 3.5s steps(40, end),
+            blink-caret 0.75s step-end infinite;
+        font-weight: bold;
+    }
+
+    .my-work {
+        color: #ff6600;
+        letter-spacing: 0.15em;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #ff6600;
+        }
+    }
+
+    .chevron-down {
+        color: #ff6600;
+        font-size: 3rem;
+        position: absolute;
+        bottom: 15px;
+        cursor: pointer;
+    }
+}
+
+.about-and-skills {
+    // height: 100vh;
+
+    .about {
+        .image-section .image-card {
+            height: 250px;
+            width: 250px;
+            border: 5px solid black;
+            padding: 5px;
+
+            img {
+                height: inherit;
+                width: inherit;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        .work-section {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 15px;
+
+            .social-icons {
+                .col-md-6 {
+                    width: fit-content;
+                }
+
+                .fa {
+                    font-size: 3rem;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    color: #ff6600;
+                }
+
+                .link {
+                    width: fit-content;
+                }
+            }
+
+            .download {
+                margin-top: 2rem;
+                &:hover {
+                    background-color: #ff6600;
+                    border: 1px solid #ff6600;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .skills {
+        margin-top: 3rem;
+
+        .progress {
+            .progress-bar {
+                background-color: #ff6600;
+            }
+        }
+    }
+}
+
+.work-experience {
+    // height: 100vh;
+    margin-bottom: 3rem;
+
+    .exp-details-container {
+        display: flex;
+        justify-content: space-between;
+
+        .exp-card {
+            height: 350px;
+            width: 300px;
+            padding: 0 2rem;
+            box-shadow: 1px 2px 3px lightgrey;
+            border: 1px solid lightgrey;
+            cursor: pointer;
+            overflow-y: auto;
+
+            &:hover {
+                .company-icon {
+                    color: #ff6600;
+                }
+            }
+
+            .company-icon {
+                margin-right: 1rem;
+                font-size: 2.5rem;
+            }
+
+            .company-role {
+                color: #ff6600;
+            }
+
+            .company-desc {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        display: block;
+    }
+
+    .my-title,
+    .my-work {
+        font-size: 15px;
+    }
+
+    .work-experience {
+        .exp-details-container {
+            display: block;
+
+            .exp-card {
+                width: 100%;
+            }
+        }
+    }
+}
