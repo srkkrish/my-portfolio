@@ -66,8 +66,9 @@ export class AppComponent implements OnInit {
   }
 
   downloadResume() {
-    let url = 'https://drive.google.com/file/d/1zZfncGt7pCRummY6U2C629OkcGFbtKAb/view?usp=sharing';
+    // let url = 'https://drive.google.com/file/d/1zZfncGt7pCRummY6U2C629OkcGFbtKAb/view?usp=sharing';
     // let url = 'https://resume-sivaramakrishnan-oct-2023.tiiny.site';
+    let url = 'https://drive.google.com/file/d/11x0DceT6UIwpc063gEoK2wpIoHjZBcDS/view?usp=sharing';
     window.open(url, '_blank');
   }
 }
