@@ -118,7 +118,6 @@ progress {
         }
 
         .work-section {
-            font-family: monospace;
             font-weight: bold;
             font-size: 15px;
 
@@ -208,9 +207,19 @@ progress {
         display: block;
     }
 
-    .my-title,
-    .my-work {
-        font-size: 15px;
+    .my-portfolio {
+        .my-title,
+        .my-work {
+            font-size: 15px;
+        }
+    }
+
+    .about-and-skills {
+        .about {
+            .work-section {
+                margin-top: 3rem;
+            }
+        }
     }
 
     .work-experience {
