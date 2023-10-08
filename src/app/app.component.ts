@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
       <li>Has an eye for the detailed development of the application.</li>
     </ul>` }
   ];
+  portfolioSectionVisible = true;
 
   constructor() {
   }
@@ -63,6 +64,24 @@ export class AppComponent implements OnInit {
       }, i * 50);
     }
     // }, 100)
+
+    document.body.addEventListener('scroll', () => {
+      this.scrollFunction();
+    })
+  }
+
+  scrollFunction() {
+    let element: any = document.querySelector('.my-portfolio');
+    let position = element.getBoundingClientRect();
+    // checking whether fully visible
+    // if (position.top >= 0 && position.bottom <= window.innerHeight) {
+    //   console.log('Element is fully visible in screen');
+    // }
+    // checking for partial visibility
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+      // console.log('Element is partially visible in screen');
+      this.portfolioSectionVisible = true;
+    } else this.portfolioSectionVisible = false;
   }
 
   downloadResume() {
